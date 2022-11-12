@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: "mongodb"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=SocialNetworkApp
+      - MONGO_INITDB_ROOT_PASSWORD=socialnetwork
+    ports:
+      - 27017:27017
+      
+  redis:
+    image: redis:alpine
+    container_name: "redis"
+    command: redis-server --requirepass SocialNetworkApp --appendonly yes
+    hostname: redis
+    ports:
+      - 6379:6379
