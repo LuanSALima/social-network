@@ -131,6 +131,6 @@ export class SocialNetworkServer {
   }
 
   private socketIOConnections(io: SocketServer): void {
-    log.info('socketIOConnections')
+    log.info('socketIOConnections');
   }
 }
